@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Notes  App</string>
+    <string name="App_Name">Fab Notes</string>
+    <string name="search_here">Search Here...</string>
+    <string name="enter_the_title">Note Title</string>
+    <string name="note_subtitle">Note Subtitle..</string>
+    <string name="add_a_link">Add a link</string>
+    <string name="add">ADD</string>
+    <string name="cancel">CANCEL</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="delete_note_txt">Delete Note</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete ?</string>
+    <string name="mohammed_sahil">Mohammed Sahil</string>
+    <string name="created_by">Created By</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">Github</string>
+    <string name="instagram">Instagram</string>
+    <string name="about_us">About Us</string>
+</resources>

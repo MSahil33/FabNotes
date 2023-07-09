@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.MainActivity"
+    android:background="@color/colorPrimary">
+
+
+    <!--For App Name-->
+    <TextView
+        android:id="@+id/txt_MyNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/App_Name"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:textSize="@dimen/_24sdp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+<!--    For search bar with search icon-->
+    <LinearLayout
+        android:id="@+id/layout_srch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_42sdp"
+        android:background="@drawable/backgound_search"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@id/txt_MyNotes"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_search"
+            app:tint="@color/colorIcons" />
+
+        <EditText
+            android:id="@+id/inp_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:hint="@string/search_here"
+            android:textColorHint="@color/colorTextHint"
+            android:background="@null"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_13ssp"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+
+<!--    Recycler view for displaying the notes cards-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/layout_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_4sdp"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_quick_actions"
+        app:layout_constraintTop_toBottomOf="@+id/layout_srch"
+        />
+
+<!--    For Bottom Quock Actions-->
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_quick_actions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorQuickActionsBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_6sdp"
+        android:paddingStart="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/img_aboutUs"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_about_us"
+            app:tint="@color/colorIcons" />
+
+
+
+    </LinearLayout>
+
+    <!--    For Floating on bottom add note button-->
+
+    <ImageView
+        android:id="@+id/add_btn_main"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:background="@drawable/backgound_add_main"
+        android:src="@drawable/ic_add_main"
+        app:tint="@color/colorPrimary"
+        android:contentDescription="@string/app_name"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/layout_quick_actions"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_quick_actions"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
